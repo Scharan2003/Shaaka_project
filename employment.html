@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title>Registration and Login Form</title>
+    <link rel="stylesheet" href="./style2.css">
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <form id="registerForm" method="post" action="employee_register.php">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="mobile_number">Mobile Number:</label><br>
+      <input type="text" id="mobile_number" name="mobile_number"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br>
+      <label for="food_type">Food Type(Veg Or Veg&Non-Veg):</label><br>
+      <input type="text" id="food_type" name="food_type"><br>
+      <input type="submit" name="register" value="Register">
+    </form>
+
+    <h1>Login Form</h1>
+    <form id="loginForm" action="employee_login.php" method="post">
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br>
+      <input type="submit" name="login" value="Login">
+    </form>
+
+    <script>
+      document.getElementById('registerForm').addEventListener('submit', function(event) {
+        var name = document.getElementById('name').value;
+        var mobile_number = document.getElementById('mobile_number').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var foodType = document.getElementById('foodType').value;
+
+        if (name == "" || mobile_number == "" || email == "" || password == "" || foodType == "") {
+          
+          alert("Please fill in all fields");
+        }
+      });
+
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        }
+      );
+    </script>
+     <style>body {
+      margin: 0;
+      padding: 0;
+      background-image: url('./img/employment.jpeg'); /* replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      height: 100vh; /* set the height to 100% of the viewport */
+     }</style>
+     <style>
+      h1{
+        color: red;
+      }
+     </style>
+  </body>
+</html>

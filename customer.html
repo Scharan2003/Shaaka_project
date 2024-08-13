@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>customer</title>
+    <link rel="stylesheet" href="./style2.css">
+</head>
+<body>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }</style>
+    <!-- Sign Up Form -->
+    <form id="sign-up-form" method="post" action="customer_register.php">
+        <h2>Sign Up</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="register">
+    </form>
+
+    <!-- Sign In Form -->
+    <form id="sign-in-form" method="post" action="customer_login.php">  
+        <h2>Sign In</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="login">
+    </form>
+
+    <!-- Login Status -->
+    <div id="login-status"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
